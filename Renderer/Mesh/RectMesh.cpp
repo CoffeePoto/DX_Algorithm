@@ -11,6 +11,7 @@ RectMesh::RectMesh()
 	};
 
 	vertexCount = _countof(vertices);
+	stride = VertexType::Stride();
 
 	D3D11_BUFFER_DESC vertexBufferDesc = {};
 	vertexBufferDesc.ByteWidth = VertexType::Stride() * vertexCount;

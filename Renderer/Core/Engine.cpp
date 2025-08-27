@@ -7,10 +7,11 @@ LRESULT Engine::MsgProcess(HWND hwnd, UINT message, WPARAM wparam, LPARAM lparam
 {
 	switch (message)
 	{
-	case WM_QUIT:
+	case WM_DESTROY:
 		PostQuitMessage(0);
 		break;
-	case WM_DESTROY:
+
+	case WM_KEYDOWN:
 		if (wparam == VK_ESCAPE)
 		{
 			if (MessageBoxA(nullptr, "Do you want to Quit?", "Quit?", MB_YESNO) == IDYES)
