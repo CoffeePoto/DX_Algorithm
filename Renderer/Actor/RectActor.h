@@ -4,5 +4,5 @@
 class RectActor : public Actor
 {
 public:
-	RectActor();
+	RectActor(float topx, float topy, float bottomx, float bottomy);
 };

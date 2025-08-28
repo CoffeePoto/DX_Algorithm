@@ -1,3 +1,10 @@
+cbuffer matrixBuffer : register(b0)
+{
+    matrix worldMatrix;
+    matrix viewMatrix;
+    matrix projectionMatrix;
+};
+
 struct VertexInput
 {
     float3 position : POSITION;
@@ -13,7 +20,14 @@ struct PixelInput
 PixelInput main(VertexInput input)
 {
     PixelInput output;
-    output.position = float4(input.position, 1);
+    
+    float4 pos = float4(input.position, 1);
+    pos = mul(pos, worldMatrix);
+    pos = mul(pos, viewMatrix);
+    pos = mul(pos, projectionMatrix);
+    
+    output.position = pos; /*float4(input.position, 1);*/
     output.color = input.color;
+    
     return output;
 }

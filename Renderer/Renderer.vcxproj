@@ -137,9 +137,8 @@
   <ItemGroup>
     <ClCompile Include="Actor\Actor.cpp" />
     <ClCompile Include="Actor\RectActor.cpp" />
-    <ClCompile Include="Algorithm\Bounds.cpp" />
-    <ClCompile Include="Algorithm\Node.cpp" />
-    <ClCompile Include="Algorithm\QuadTree.cpp" />
+    <ClCompile Include="Algorithm\AStar.cpp" />
+    <ClCompile Include="Core\Camera.cpp" />
     <ClCompile Include="Core\Engine.cpp" />
     <ClCompile Include="Core\Window.cpp" />
     <ClCompile Include="Level\Level.cpp" />
@@ -152,9 +151,9 @@
   <ItemGroup>
     <ClInclude Include="Actor\Actor.h" />
     <ClInclude Include="Actor\RectActor.h" />
-    <ClInclude Include="Algorithm\Bounds.h" />
+    <ClInclude Include="Algorithm\AStar.h" />
     <ClInclude Include="Algorithm\Node.h" />
-    <ClInclude Include="Algorithm\QuadTree.h" />
+    <ClInclude Include="Core\Camera.h" />
     <ClInclude Include="Core\Engine.h" />
     <ClInclude Include="Core\Utils.h" />
     <ClInclude Include="Core\Window.h" />

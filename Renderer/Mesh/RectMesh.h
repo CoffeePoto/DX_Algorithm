@@ -4,6 +4,6 @@
 class RectMesh : public Mesh
 {
 public:
-	RectMesh();
+	RectMesh(float, float, float, float);
 	~RectMesh();
 };
