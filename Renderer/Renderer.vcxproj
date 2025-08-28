@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -136,7 +136,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Actor\Actor.cpp" />
+    <ClCompile Include="Actor\GoalActor.cpp" />
+    <ClCompile Include="Actor\ObstacleActor.cpp" />
     <ClCompile Include="Actor\RectActor.cpp" />
+    <ClCompile Include="Actor\StartActor.cpp" />
     <ClCompile Include="Algorithm\AStar.cpp" />
     <ClCompile Include="Core\Camera.cpp" />
     <ClCompile Include="Core\Engine.cpp" />
@@ -144,13 +147,20 @@
     <ClCompile Include="Level\Level.cpp" />
     <ClCompile Include="Level\RectLevel.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Mesh\GoalMesh.cpp" />
     <ClCompile Include="Mesh\Mesh.cpp" />
+    <ClCompile Include="Mesh\ObstacleMesh.cpp" />
     <ClCompile Include="Mesh\RectMesh.cpp" />
+    <ClCompile Include="Mesh\StartMesh.cpp" />
+    <ClCompile Include="Shader\lineShader.cpp" />
     <ClCompile Include="Shader\Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor\Actor.h" />
+    <ClInclude Include="Actor\GoalActor.h" />
+    <ClInclude Include="Actor\ObstacleActor.h" />
     <ClInclude Include="Actor\RectActor.h" />
+    <ClInclude Include="Actor\StartActor.h" />
     <ClInclude Include="Algorithm\AStar.h" />
     <ClInclude Include="Algorithm\Node.h" />
     <ClInclude Include="Core\Camera.h" />
@@ -160,8 +170,12 @@
     <ClInclude Include="Level\Level.h" />
     <ClInclude Include="Level\RectLevel.h" />
     <ClInclude Include="Math\Math.h" />
+    <ClInclude Include="Mesh\GoalMesh.h" />
     <ClInclude Include="Mesh\Mesh.h" />
+    <ClInclude Include="Mesh\ObstacleMesh.h" />
     <ClInclude Include="Mesh\RectMesh.h" />
+    <ClInclude Include="Mesh\StartMesh.h" />
+    <ClInclude Include="Shader\lineShader.h" />
     <ClInclude Include="Shader\Shader.h" />
   </ItemGroup>
   <ItemGroup>

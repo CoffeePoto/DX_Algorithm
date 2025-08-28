@@ -11,7 +11,7 @@ public:
 
 	virtual void Bind();
 
-private:
+protected:
 	struct MatrixType
 	{
 		XMMATRIX world;
@@ -19,7 +19,7 @@ private:
 		XMMATRIX projection;
 	};
 
-private:
+protected:
 	ID3D11VertexShader* vertexShader = nullptr;
 	ID3DBlob* vertexShaderBuffer = nullptr;
 	ID3D11PixelShader* pixelShader = nullptr;

@@ -227,6 +227,9 @@ void Engine::Draw()
 	////셰이더 바인딩하고 메시 그리기
 	//shader->Bind();
 	//mesh->Draw();
+
+
+
 	if (mainLevel)
 	{
 		mainLevel->Draw();

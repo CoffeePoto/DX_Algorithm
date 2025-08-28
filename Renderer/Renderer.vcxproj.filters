@@ -51,6 +51,27 @@
     <ClCompile Include="Algorithm\AStar.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Actor\StartActor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh\StartMesh.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh\GoalMesh.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\GoalActor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh\ObstacleMesh.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\ObstacleActor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader\lineShader.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Engine.h">
@@ -93,6 +114,27 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Algorithm\AStar.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\StartActor.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh\StartMesh.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh\GoalMesh.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\GoalActor.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh\ObstacleMesh.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\ObstacleActor.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\lineShader.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
