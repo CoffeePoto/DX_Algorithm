@@ -1,8 +1,8 @@
 #include "RectActor.h"
 #include "Mesh/RectMesh.h"
 
-RectActor::RectActor(float topx, float topy, float bottomx, float bottomy)
+RectActor::RectActor(XMFLOAT4 color)
 {
-	mesh = new RectMesh(topx, topy, bottomx, bottomy);
+	mesh = new RectMesh(color);
 	shader = new Shader(L"HLSLShaders/Default");
 }	

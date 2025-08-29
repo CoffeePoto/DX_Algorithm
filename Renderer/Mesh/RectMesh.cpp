@@ -1,13 +1,13 @@
 #include "RectMesh.h"
 
-RectMesh::RectMesh(float topx, float topy, float bottomx, float bottomy)
+RectMesh::RectMesh(XMFLOAT4 color)
 {
 	VertexType vertices[]
 	{
-		VertexType{Vector3(topx, topy, 10.0f), Color(1.0f, 0.0f, 0.0f, 1.0f)},
-		VertexType{Vector3(topx, bottomy, 10.0f), Color(0.0f, 1.0f, 0.0f, 1.0f)},
-		VertexType{Vector3(bottomx, bottomy, 10.0f), Color(0.0f, 0.0f, 1.0f, 1.0f)},
-		VertexType{Vector3(bottomx, topy, 10.0f), Color(1.0f, 1.0f, 0.0f, 1.0f)}
+		VertexType{XMFLOAT3(0.48f, 0.48f, 10.0f), color},
+		VertexType{XMFLOAT3(0.48f, -0.48f, 10.0f), color},
+		VertexType{XMFLOAT3(-0.48f, -0.48f, 10.0f), color},
+		VertexType{XMFLOAT3(-0.48f, 0.48f, 10.0f), color}
 	};
 
 	vertexCount = _countof(vertices);

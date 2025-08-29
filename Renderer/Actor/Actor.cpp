@@ -18,6 +18,7 @@ void Actor::Update(float deltaTime)
 
 void Actor::Draw()
 {
+	transform.Bind();
 	if (shader && mesh)
 	{
 		shader->Bind();
@@ -33,4 +34,14 @@ void Actor::SetOwner(Level* newOwner)
 void Actor::Destroy()
 {
 	isExpired = true;
+}
+
+void Actor::SetPosition(const XMFLOAT3& newPosition)
+{
+	transform.SetPosition(newPosition);
+}
+
+XMFLOAT3 Actor::GetPosition() const
+{
+	return transform.GetPosition();
 }

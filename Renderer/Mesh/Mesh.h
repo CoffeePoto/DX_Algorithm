@@ -6,10 +6,11 @@
 class Mesh
 {
 public:
-	Mesh() = default;
-	Mesh(void* vertices, uint32 stride, uint32 vertexCount, void* indices, uint32 indexCount);
+	Mesh();
+	//Mesh(void* vertices, uint32 stride, uint32 vertexCount, void* indices, uint32 indexCount);
 	virtual ~Mesh();
 
+	void Initialize(void* vertices, uint32 stride, uint32 vertexCount, void* indices, uint32 indexCount);
 	virtual void Draw();
 
 protected:

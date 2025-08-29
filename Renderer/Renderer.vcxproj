@@ -147,12 +147,10 @@
     <ClCompile Include="Level\Level.cpp" />
     <ClCompile Include="Level\RectLevel.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Mesh\GoalMesh.cpp" />
+    <ClCompile Include="Math\Transform.cpp" />
     <ClCompile Include="Mesh\Mesh.cpp" />
-    <ClCompile Include="Mesh\ObstacleMesh.cpp" />
     <ClCompile Include="Mesh\RectMesh.cpp" />
     <ClCompile Include="Mesh\StartMesh.cpp" />
-    <ClCompile Include="Shader\lineShader.cpp" />
     <ClCompile Include="Shader\Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -170,12 +168,10 @@
     <ClInclude Include="Level\Level.h" />
     <ClInclude Include="Level\RectLevel.h" />
     <ClInclude Include="Math\Math.h" />
-    <ClInclude Include="Mesh\GoalMesh.h" />
+    <ClInclude Include="Math\Transform.h" />
     <ClInclude Include="Mesh\Mesh.h" />
-    <ClInclude Include="Mesh\ObstacleMesh.h" />
     <ClInclude Include="Mesh\RectMesh.h" />
     <ClInclude Include="Mesh\StartMesh.h" />
-    <ClInclude Include="Shader\lineShader.h" />
     <ClInclude Include="Shader\Shader.h" />
   </ItemGroup>
   <ItemGroup>

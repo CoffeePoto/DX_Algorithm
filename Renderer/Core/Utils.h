@@ -9,9 +9,11 @@
 #include <dxgi.h>
 #include <Windows.h>
 #include <d3dcompiler.h>
+#include <DirectXMath.h>
 
 #include "Math/Math.h"
 
+using namespace DirectX;
 using int32 = __int32;
 using int64 = __int64;
 using uint32 = unsigned __int32;

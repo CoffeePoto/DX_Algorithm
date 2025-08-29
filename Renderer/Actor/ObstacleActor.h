@@ -4,5 +4,5 @@
 class ObstacleActor : public Actor
 {
 public:
-	ObstacleActor(float bottomx, float bottomy);
+	ObstacleActor(XMFLOAT4 color);
 };

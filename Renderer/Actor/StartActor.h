@@ -5,5 +5,5 @@
 class StartActor : public Actor
 {
 public:
-	StartActor(float, float, float, float);
+	StartActor(XMFLOAT4 color);
 };

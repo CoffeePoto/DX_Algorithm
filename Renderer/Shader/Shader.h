@@ -25,5 +25,4 @@ protected:
 	ID3D11PixelShader* pixelShader = nullptr;
 	ID3DBlob* pixelShaderBuffer = nullptr;
 	ID3D11InputLayout* inputlayout = nullptr;
-	ID3D11Buffer* matrixBuffer = nullptr;
 };

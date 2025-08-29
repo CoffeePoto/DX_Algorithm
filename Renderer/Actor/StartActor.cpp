@@ -1,8 +1,8 @@
 #include "StartActor.h"
-#include "Mesh/StartMesh.h"
+#include "Mesh/RectMesh.h"
 
-StartActor::StartActor(float topx, float topy, float bottomx, float bottomy)
+StartActor::StartActor(XMFLOAT4 color)
 {
-	mesh = new StartMesh(topx, topy, bottomx, bottomy);
+	mesh = new RectMesh(color);
 	shader = new Shader(L"HLSLShaders/Default");
 }

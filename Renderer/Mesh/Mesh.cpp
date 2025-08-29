@@ -1,7 +1,20 @@
 #include "Mesh.h"
 
-Mesh::Mesh(void* vertices, uint32 stride, uint32 vertexCount, void* indices, uint32 indexCount)
-	:vertexCount(vertexCount), stride(stride), indexCount(indexCount)
+Mesh::Mesh()
+{
+
+}
+//Mesh::Mesh(void* vertices, uint32 stride, uint32 vertexCount, void* indices, uint32 indexCount)
+//	:vertexCount(vertexCount), stride(stride), indexCount(indexCount)
+//{
+//	
+//}
+
+Mesh::~Mesh()
+{
+}
+
+void Mesh::Initialize(void* vertices, uint32 stride, uint32 vertexCount, void* indices, uint32 indexCount)
 {
 	//1.vertexbuffer 설정
 	D3D11_BUFFER_DESC vertexDesc = {};
@@ -38,10 +51,6 @@ Mesh::Mesh(void* vertices, uint32 stride, uint32 vertexCount, void* indices, uin
 	}
 }
 
-Mesh::~Mesh()
-{
-}
-
 void Mesh::Draw()
 {
 	//Input Assembler에 조립
@@ -49,6 +58,5 @@ void Mesh::Draw()
 	uint32 offset = 0;
 	Engine::Get().GetContext()->IASetVertexBuffers(0, 1, &vertexBuffer, &stride, &offset);
 	Engine::Get().GetContext()->IASetIndexBuffer(indexBuffer, DXGI_FORMAT_R32_UINT, 0);
-
 	Engine::Get().GetContext()->DrawIndexed(indexCount, 0, 0);
 }

@@ -1,8 +1,9 @@
 #include "ObstacleActor.h"
-#include "Mesh/ObstacleMesh.h"
+#include "Mesh/RectMesh.h"
+#include "Shader/Shader.h"
 
-ObstacleActor::ObstacleActor(float bottomx, float bottomy)
+ObstacleActor::ObstacleActor(XMFLOAT4 color)
 {
-	mesh = new ObstacleMesh(bottomx, bottomy);
+	mesh = new RectMesh(color);
 	shader = new Shader(L"HLSLShaders/Default");
 }

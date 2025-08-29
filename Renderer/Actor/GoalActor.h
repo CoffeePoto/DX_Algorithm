@@ -4,5 +4,5 @@
 class GoalActor : public Actor
 {
 public:
-	GoalActor(float topx, float topy, float bottomx, float bottomy);
+	GoalActor(XMFLOAT4 color);
 };

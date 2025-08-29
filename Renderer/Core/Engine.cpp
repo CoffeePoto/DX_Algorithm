@@ -115,22 +115,13 @@ Engine::Engine(uint32 width, uint32 height, HINSTANCE hInstance)
 	//shader = new Shader(L"HLSLShaders/Default");
 
 	// 투영 행렬을 설정합니다
-	Camera* cam = new Camera();
-	cam->SetPosition(0.0f, 0.0f, 10.0f);
 	float fieldOfView = XM_PI / 4.0f;
 	float screenAspect = static_cast<float>(width) / static_cast<float>(height);
-
-	// 3D 렌더링을위한 투영 행렬을 만듭니다
-	projectionMatrix = XMMatrixPerspectiveFovLH(fieldOfView, screenAspect, 0.1f, 1000.0f);
-
-	// 세계 행렬을 항등 행렬로 초기화합니다
-	worldMatrix = XMMatrixIdentity();
+	camera = new Camera(fieldOfView, screenAspect, (float)width, (float)height, 0.1f, 1000.0f);
+	camera->SetPosition(0.0f, 0.0f, -10.0f);
 
 	// 2D 렌더링을위한 직교 투영 행렬을 만듭니다
-	orthoMatrix = XMMatrixOrthographicLH(width, height, 0.1f, 1000.0f);
-
-	//뷰 행렬 가져오기
-	viewMatrix = cam->GetViewMatrix();
+	//orthoMatrix = XMMatrixOrthographicLH(width, height, 0.1f, 1000.0f);
 }
 
 Engine::~Engine()
@@ -212,7 +203,6 @@ void Engine::Render()
 	BeginDraw(backgroundColor);
 	Draw();
 	EndDraw();
-
 }
 
 void Engine::BeginDraw(float* backgroundColor)
@@ -228,8 +218,7 @@ void Engine::Draw()
 	//shader->Bind();
 	//mesh->Draw();
 
-
-
+	camera->Render();
 	if (mainLevel)
 	{
 		mainLevel->Draw();

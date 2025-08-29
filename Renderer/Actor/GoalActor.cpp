@@ -1,8 +1,9 @@
 #include "GoalActor.h"
-#include "Mesh/GoalMesh.h"
+#include "Mesh/RectMesh.h"
+#include "Shader/Shader.h"
 
-GoalActor::GoalActor(float topx, float topy, float bottomx, float bottomy)
+GoalActor::GoalActor(XMFLOAT4 color)
 {
-	mesh = new GoalMesh(topx, topy, bottomx, bottomy);
+	mesh = new RectMesh(color);
 	shader = new Shader(L"HLSLShaders/Default");
 }

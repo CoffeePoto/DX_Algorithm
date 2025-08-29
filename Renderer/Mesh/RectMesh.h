@@ -4,6 +4,6 @@
 class RectMesh : public Mesh
 {
 public:
-	RectMesh(float, float, float, float);
+	RectMesh(XMFLOAT4 Color);
 	~RectMesh();
 };

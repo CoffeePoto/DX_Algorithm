@@ -3,16 +3,6 @@
 #include "Node.h"
 #include <vector>
 
-template <typename T>
-void SafeDelete(T*& pointer)
-{
-	if (pointer != nullptr)
-	{
-		delete pointer;
-		pointer = nullptr;
-	}
-}
-
 class Node;
 class AStar
 {
