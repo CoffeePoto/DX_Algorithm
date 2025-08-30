@@ -2,6 +2,7 @@
 #pragma once
 
 #include <vector>
+#include "Algorithm/AStar.h"
 
 class Actor;
 class Level
@@ -17,6 +18,10 @@ public:
 	void DestroyActor(Actor* deleteActor);
 
 	void ProcessAddAndDeleteActor();
+
+protected:
+	AStar aStar;
+	std::vector<Node*> path;
 
 private:
 	std::vector<Actor*> actors;

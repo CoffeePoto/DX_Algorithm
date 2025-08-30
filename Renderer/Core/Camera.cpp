@@ -38,7 +38,7 @@ Camera::~Camera()
 void Camera::SetPosition(float x, float y, float z)
 {
 	position.x = x;
-	position.y - y;
+	position.y = y;
 	position.z = z;
 	isDirty = true;
 }
@@ -94,15 +94,6 @@ void Camera::Render()
 		pitch = rotation.x * 0.0174532925f;
 		yaw = rotation.y * 0.0174532925f;
 		roll = rotation.z * 0.0174532925f;
-
-		//rotationMatrix = XMMatrixRotationRollPitchYaw(pitch, yaw, roll);
-
-		//// lookAt 및 up 벡터를 회전 행렬로 변형하여 뷰가 원점에서 올바르게 회전되도록 합니다.
-		//lookAtVector = XMVector3TransformNormal(lookAtVector, rotationMatrix);
-		//upVector = XMVector3TransformNormal(upVector, rotationMatrix);
-
-		//// 회전 된 카메라 위치를 뷰어 위치로 변환합니다.
-		//lookAtVector = XMVectorAdd(positionVector, lookAtVector);
 
 		// 마지막으로 세 개의 업데이트 된 벡터에서 뷰 행렬을 만듭니다.
 		viewMatrix = XMMatrixLookAtLH(positionVector, lookAtVector, upVector);

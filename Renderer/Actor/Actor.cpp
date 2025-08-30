@@ -45,3 +45,8 @@ XMFLOAT3 Actor::GetPosition() const
 {
 	return transform.GetPosition();
 }
+
+Transform Actor::GetTransform() const
+{
+	return transform;
+}

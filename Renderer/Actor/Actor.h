@@ -39,6 +39,8 @@ public:
 	void SetPosition(const XMFLOAT3& newPosition);
 	XMFLOAT3 GetPosition() const;
 
+	Transform GetTransform() const;
+
 protected:
 	bool isExpired = false;
 	Mesh* mesh = nullptr;

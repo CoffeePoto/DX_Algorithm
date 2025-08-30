@@ -19,6 +19,4 @@ protected:
 	ID3D11Buffer* vertexBuffer = nullptr;
 	ID3D11Buffer* indexBuffer = nullptr;
 	uint32 stride = 0;
-
-	XMMATRIX worldMatrix = { };
 };

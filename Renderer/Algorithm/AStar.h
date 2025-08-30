@@ -1,24 +1,12 @@
 #pragma once
 
 #include "Node.h"
+#include "Utils.h"
 #include <vector>
 
 class Node;
 class AStar
 {
-private:
-
-	// 방향 처리를 위한 구조체.
-	struct Direction
-	{
-		// 위치.
-		int x;
-		int y;
-
-		// 이동 비용
-		float cost;
-	};
-
 public:
 	AStar();
 	~AStar();

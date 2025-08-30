@@ -19,6 +19,24 @@ struct Position
 	int y = 0;
 };
 
+enum class DirectionType
+{
+	Up,
+	Down,
+	Left,
+	Right
+};
+// 방향 처리를 위한 구조체.
+struct Direction
+{
+	// 위치.
+	int x;
+	int y;
+	// 이동 비용
+	float cost;
+	DirectionType type;
+};
+
 class Node
 {
 public:
@@ -39,6 +57,7 @@ public:
 
 public:
 	Position position;
+	DirectionType direction = DirectionType::Right;
 	float gCost = 0.0f;
 	float hCost = 0.0f;
 	float fCost = 0.0f;
